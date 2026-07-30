@@ -1,1 +1,190 @@
-<h1>Hello World</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FlowOpz Template</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1400px;
+            min-height: 100vh;
+            margin: auto;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+
+        header {
+            min-height: 90px;
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            border-bottom: 1px solid #e8e8e8;
+            background: #ffffff;
+        }
+
+        .logo img {
+            width: 180px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        nav a {
+            color: #222222;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #7c3aed;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            background: #000000;
+            color: #ffffff;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        /* Center image section */
+
+        main {
+            flex: 1;
+            padding: 60px 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fafafa;
+        }
+
+        .image-area {
+            width: 100%;
+            max-width: 1100px;
+            min-height: 650px;
+            padding: 20px;
+            border: 3px dashed #d6d6d6;
+            border-radius: 12px;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-area img {
+            width: 100%;
+            max-height: 650px;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 35px 20px;
+            background: #111111;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        footer p {
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 900px) {
+            header {
+                padding: 20px;
+                flex-direction: column;
+            }
+
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            main {
+                padding: 30px 15px;
+            }
+
+            .image-area {
+                min-height: 420px;
+            }
+
+            .image-area img {
+                max-height: 420px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <div class="logo">
+                <img
+                    src="https://flowopz.com/wp-content/uploads/2026/04/Logo-1-1-2048x614-1.webp"
+                    alt="FlowOpz Logo"
+                >
+            </div>
+
+            <nav>
+                <a href="https://flowopz.com/">Home</a>
+                <a href="https://flowopz.com/about-us/">About</a>
+                <a href="https://flowopz.com/service/">Services</a>
+                <a href="https://flowopz.com/blog/">Blog</a>
+                <a href="https://flowopz.com/contact-us/">Contact</a>
+            </nav>
+
+            <a href="https://flowopz.com/contact-us/" class="btn">
+                Book Free Call
+            </a>
+        </header>
+
+        <main>
+            <div class="image-area">
+                <img
+                    src="https://a5.behance.net/adde8feaf4b3d28ebff75989b733e89a75b678e1/img/search/homepage-seo-image.webp"
+                    alt="Generated Image"
+                >
+            </div>
+        </main>
+
+        <footer>
+            <h2>FlowOpz</h2>
+            <p>© 2026 FlowOpz. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+</body>
+</html>
