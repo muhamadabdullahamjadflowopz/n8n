@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FlowOpz</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+
+    /* ==============================
+       HEADER
+    ============================== */
+
+    .main-header {
+      width: 100%;
+      height: 90px;
+
+      background: #111111;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      padding: 0 6%;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 55px;
+      height: 55px;
+
+      object-fit: contain;
+      display: block;
+    }
+
+    .brand-name {
+      color: #ffffff;
+
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+
+    /* NAVIGATION */
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 35px;
+    }
+
+    .main-nav a {
+      color: #ffffff;
+
+      text-decoration: none;
+
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .main-nav a:hover {
+      opacity: 0.75;
+    }
+
+    .book-btn {
+      background: #ffffff;
+
+      color: #111111 !important;
+
+      padding: 12px 22px;
+
+      border-radius: 8px;
+
+      font-weight: 700 !important;
+    }
+
+
+    /* ==============================
+       SCREENSHOT
+    ============================== */
+
+    main {
+      width: 100%;
+
+      background: #f5f5f5;
+    }
+
+    .screenshot-section {
+      width: 100%;
+
+      padding: 40px 4%;
+
+      display: flex;
+      justify-content: center;
+    }
+
+    .screenshot-box {
+      width: 100%;
+
+      max-width: 1450px;
+
+      background: #ffffff;
+
+      border-radius: 10px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 8px 30px rgba(0,0,0,0.10);
+    }
+
+    .screenshot-box img {
+      width: 100%;
+      height: auto;
+
+      display: block;
+
+      object-fit: contain;
+      object-position: top center;
+    }
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    .main-footer {
+      width: 100%;
+
+      background: #111111;
+
+      color: #ffffff;
+
+      padding: 45px 6% 25px;
+    }
+
+    .footer-top {
+      max-width: 1450px;
+
+      margin: 0 auto 40px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      gap: 40px;
+    }
+
+
+    /* FOOTER LEFT */
+
+    .footer-left h2 {
+      font-size: 25px;
+      font-weight: 800;
+
+      margin-bottom: 12px;
+    }
+
+    .footer-left p {
+      max-width: 380px;
+
+      color: #aaaaaa;
+
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+
+    /* FOOTER LINKS */
+
+    .footer-links {
+      display: flex;
+
+      gap: 60px;
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+
+      gap: 12px;
+    }
+
+    .footer-column h3 {
+      font-size: 14px;
+
+      margin-bottom: 5px;
+
+      color: #ffffff;
+    }
+
+    .footer-column a {
+      color: #999999;
+
+      text-decoration: none;
+
+      font-size: 13px;
+    }
+
+    .footer-column a:hover {
+      color: #ffffff;
+    }
+
+
+    /* FOOTER BOTTOM */
+
+    .footer-bottom {
+      max-width: 1450px;
+
+      margin: auto;
+
+      border-top: 1px solid #333333;
+
+      padding-top: 22px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      color: #777777;
+
+      font-size: 13px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+
+      gap: 20px;
+    }
+
+    .footer-bottom-links a {
+      color: #777777;
+
+      text-decoration: none;
+    }
+
+
+    /* ==============================
+       MOBILE
+    ============================== */
+
+    @media (max-width: 768px) {
+
+      .main-header {
+        height: 75px;
+
+        padding: 0 20px;
+      }
+
+      .brand img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .brand-name {
+        font-size: 21px;
+      }
+
+      .main-nav a:not(.book-btn) {
+        display: none;
+      }
+
+      .book-btn {
+        padding: 10px 14px;
+
+        font-size: 13px !important;
+      }
+
+      .screenshot-section {
+        padding: 20px 10px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        gap: 40px;
+
+        flex-wrap: wrap;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="main-header">
+
+    <a href="https://flowopz.com/" class="brand">
+
+      <img
+        src="https://flowopz.com/wp-content/uploads/2026/04/cropped-Logo-1-1-2048x614-1-270x270.webp"
+        alt="FlowOpz Logo"
+      >
+
+      <span class="brand-name">
+        FlowOpz
+      </span>
+
+    </a>
+
+
+    <nav class="main-nav">
+
+      <a href="#">
+        Home
+      </a>
+
+      <a href="#">
+        Services
+      </a>
+
+      <a href="#">
+        About
+      </a>
+
+      <a href="#">
+        Contact
+      </a>
+
+      <a href="#" class="book-btn">
+        Book A Call
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =========================
+       SCREENSHOT
+  ========================== -->
+
+  <main>
+
+    <section class="screenshot-section">
+
+      <div class="screenshot-box">
+
+        <img
+          src="https://storage.googleapis.com/firecrawl-scrape-media/screenshot-b628d2bd-2615-46dd-a640-19d8c43ac0f8.png?GoogleAccessId=scrape-bucket-accessor%40firecrawl.iam.gserviceaccount.com&Expires=1786119727&Signature=XfkRZGr%2BUMg2HlrbkPoMbwk5VqRC4RykHC%2BC2QagZaJhy%2FvDb84G8phMaTAloTf6lq1vgfqrI5MfRbfsY63wsO4X5eD9nhDsnhL6ZMwOC7M8UHTXxT%2F88dqGv%2FBmsxOvKlX8W40CsH6muGdQeQIGLGf3S799s7J%2BV2yKYK2f82gTgF2aujI395yVvl1d9vNEFNyiSpQ6wZ2dW6eZsOyq4rDAv8dH%2FJkcKkm6G66%2BYHFc4F9806cOOKS%2BPWOHP%2BybkuOupFhHvzi%2FYv%2FnFBCkP8zyumwvgq%2BIT47MSvSX8gLKhAh4D%2Bz8ymWggQ35mpBAfaPrpFEI5qUhL8CJvEXN5Q%3D%3D"
+          alt="Website Screenshot"
+        >
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="main-footer">
+
+    <div class="footer-top">
+
+
+      <!-- NO LOGO HERE -->
+
+      <div class="footer-left">
+
+        <h2>
+          FlowOpz
+        </h2>
+
+        <p>
+          Smart automation and digital solutions
+          built to help businesses operate better
+          and scale faster.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div class="footer-column">
+
+          <h3>Company</h3>
+
+          <a href="#">
+            About
+          </a>
+
+          <a href="#">
+            Contact
+          </a>
+
+          <a href="#">
+            Services
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h3>Quick Links</h3>
+
+          <a href="#">
+            Home
+          </a>
+
+          <a href="#">
+            Book A Call
+          </a>
+
+          <a href="#">
+            Privacy Policy
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 FlowOpz. All Rights Reserved.
+      </span>
+
+      <div class="footer-bottom-links">
+
+        <a href="#">
+          Privacy
+        </a>
+
+        <a href="#">
+          Terms
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+</body>
+</html>
